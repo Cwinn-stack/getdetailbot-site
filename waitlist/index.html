@@ -78,8 +78,7 @@ h1{
 }
 .field{margin:0 0 14px}
 label{display:block;font-size:13px;font-weight:600;margin:0 0 6px;color:#ececf1}
-.opt{font-weight:500;color:#8d8d98}
-input[type="email"],input[type="tel"]{
+input[type="email"]{
   width:100%;
   appearance:none;
   background:#121216;
@@ -99,7 +98,6 @@ input:-webkit-autofill{
   box-shadow:0 0 0 1000px #121216 inset;
 }
 .hp{position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden}
-.consent{margin:8px 0 0;font-size:12px;line-height:1.45;color:#9a9aa6}
 button{
   width:100%;
   margin-top:16px;
@@ -153,11 +151,6 @@ button:disabled{cursor:progress;filter:saturate(.75) brightness(.88)}
         <label for="email">Email Address</label>
         <input id="email" name="email" type="email" autocomplete="email" inputmode="email" maxlength="254" required placeholder="you@example.com">
       </div>
-      <div class="field">
-        <label for="phone">Phone <span class="opt">optional</span></label>
-        <input id="phone" name="phone" type="tel" autocomplete="tel" maxlength="40">
-        <p class="consent">The phone number is optional and won't be used for text messages without separate consent.</p>
-      </div>
       <!-- PLACEHOLDER COPY: Conor to replace -->
       <button type="submit">Join the waitlist</button>
       <p id="status" class="status" role="status" aria-live="polite"></p>
@@ -177,7 +170,6 @@ button:disabled{cursor:progress;filter:saturate(.75) brightness(.88)}
   var KEY = "sb_publishable_fHEdHOWY6zm8H4OvjMkN0g_gdO173xp";
   var form = document.getElementById("waitlist-form");
   var emailEl = document.getElementById("email");
-  var phoneEl = document.getElementById("phone");
   var honey = document.getElementById("hp-company");
   var statusEl = document.getElementById("status");
   var button = form.querySelector("button[type=submit]");
@@ -207,7 +199,6 @@ button:disabled{cursor:progress;filter:saturate(.75) brightness(.88)}
     }
 
     var email = emailEl.value.trim().toLowerCase();
-    var phone = phoneEl.value.trim();
     if (!emailPattern.test(email)) {
       setStatus("err", "Enter a valid email address.");
       emailEl.setAttribute("aria-invalid", "true");
@@ -230,7 +221,6 @@ button:disabled{cursor:progress;filter:saturate(.75) brightness(.88)}
       },
       body: JSON.stringify({
         email: email,
-        phone: phone ? phone : null,
         source: "getdetailbot.com/waitlist",
         user_agent: navigator.userAgent
       })
