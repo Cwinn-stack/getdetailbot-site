@@ -4,15 +4,18 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Join the DetailBot waitlist</title>
-<meta name="description" content="DetailBot gives car detailing businesses proven Facebook ads. Sign up to hear when spots open.">
+<meta name="description" content="Scripts that convert, video editing, and fully managed Facebook ads for car detailers. 30-day free trial.">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="icon" href="../favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="canonical" href="https://getdetailbot.com/waitlist">
 <meta property="og:title" content="Join the DetailBot waitlist">
-<meta property="og:description" content="DetailBot gives car detailing businesses proven Facebook ads. Sign up to hear when spots open.">
+<meta property="og:description" content="Scripts that convert, video editing, and fully managed Facebook ads for car detailers. 30-day free trial.">
 <meta property="og:url" content="https://getdetailbot.com/waitlist">
 <meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{color-scheme:dark}
 *{box-sizing:border-box}
@@ -23,187 +26,179 @@ body{
   display:flex;
   flex-direction:column;
   align-items:center;
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-  color:#f4f4f5;
-  background-color:#09090b;
-  background-image:repeating-linear-gradient(135deg,rgba(255,255,255,.032) 0 1px,transparent 1px 7px);
-  background-attachment:fixed;
+  background:#000;
+  color:#fff;
+  font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
   line-height:1.5;
 }
-.hang{
-  width:min(420px,calc(100% - 32px));
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  flex:1 0 auto;
-  padding-top:78px;
-  position:relative;
-}
-.strap{
-  position:absolute;
-  top:0;
-  left:50%;
-  width:46px;
-  height:96px;
-  transform:translateX(-50%);
-  background:linear-gradient(90deg,#1e3a8a 0%,#2563eb 18%,#eff6ff 46%,#60a5fa 58%,#1d4ed8 100%);
-  box-shadow:0 0 12px rgba(59,130,246,.85),0 0 28px rgba(37,99,235,.45);
-  z-index:3;
-}
-.card{
-  width:100%;
-  position:relative;
-  z-index:2;
-  background:linear-gradient(180deg,#242429 0%,#1a1a1f 100%);
-  border:1px solid rgba(255,255,255,.14);
-  border-radius:22px;
-  padding:40px 26px 18px;
-  box-shadow:0 30px 70px rgba(0,0,0,.5),inset 0 1px 0 rgba(255,255,255,.06);
-}
-.slot{
-  position:absolute;
-  top:14px;
-  left:50%;
-  width:92px;
-  height:16px;
-  transform:translateX(-50%);
-  border-radius:8px;
-  background:#050507;
-  box-shadow:inset 0 3px 5px rgba(0,0,0,.95),inset 0 -1px 0 rgba(255,255,255,.18),0 0 0 1px rgba(255,255,255,.06);
-  overflow:hidden;
-  z-index:4;
-}
-.slot::before{
-  content:"";
-  position:absolute;
-  top:0;
-  left:50%;
-  width:46px;
-  height:100%;
-  transform:translateX(-50%);
-  background:linear-gradient(90deg,#1e3a8a 0%,#2563eb 18%,#eff6ff 46%,#60a5fa 58%,#1d4ed8 100%);
-}
-.brand{
+.stage{
+  flex:1;
   display:flex;
   align-items:center;
   justify-content:center;
-  gap:8px;
-  margin:6px 0 18px;
-  color:#d4d4d8;
-  text-decoration:none;
-  font-weight:700;
-  font-size:14px;
-  letter-spacing:-.01em;
+  width:min(400px,calc(100% - 40px));
+  padding:48px 0 24px;
 }
-.brand img{width:26px;height:26px;border-radius:7px;display:block}
+.col{width:100%;text-align:center}
+.mark{
+  display:grid;
+  place-items:center;
+  width:52px;
+  height:52px;
+  margin:0 auto 18px;
+  border-radius:14px;
+  background:#1c1c1c;
+  border:1px solid rgba(255,255,255,.08);
+}
+.mark img{width:28px;height:28px;border-radius:8px;display:block}
+.badge{
+  display:inline-block;
+  margin:0 0 22px;
+  padding:6px 12px;
+  border:1px solid rgba(255,255,255,.2);
+  border-radius:999px;
+  color:#e4e4e4;
+  font-size:13px;
+  font-weight:500;
+  line-height:1.2;
+}
 h1{
-  margin:0 0 8px;
-  text-align:center;
-  font-size:30px;
+  margin:0 0 12px;
+  font-size:32px;
   line-height:1.15;
   letter-spacing:-.03em;
-  font-weight:800;
+  font-weight:700;
 }
 .lede{
-  margin:0 0 22px;
-  text-align:center;
-  color:#a1a1ab;
+  margin:0 0 16px;
+  color:#8a8a8a;
   font-size:15px;
+  line-height:1.55;
 }
-.field{margin:0 0 14px}
-label{display:block;font-size:13px;font-weight:600;margin:0 0 6px;color:#ececf1}
-.opt{font-weight:500;color:#8d8d98}
-input[type="email"],input[type="tel"]{
+.checks{
+  list-style:none;
+  width:100%;
+  margin:0 0 28px;
+  padding:0;
+  text-align:left;
+}
+.checks li{
+  position:relative;
+  margin:0 0 8px;
+  padding-left:24px;
+  color:#d4d4d4;
+  font-size:14px;
+  line-height:1.4;
+}
+.checks li:last-child{margin-bottom:0}
+.checks li::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:2px;
+  width:14px;
+  height:14px;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M3.2 8.3l3 3.1 6.6-7' fill='none' stroke='%2386efac' stroke-width='1.7' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/14px no-repeat;
+}
+form{margin:0}
+.sr{
+  position:absolute;
+  width:1px;
+  height:1px;
+  padding:0;
+  margin:-1px;
+  overflow:hidden;
+  clip:rect(0,0,0,0);
+  white-space:nowrap;
+  border:0;
+}
+.hp{position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden}
+input[type="email"]{
   width:100%;
   appearance:none;
-  background:#121216;
-  border:1px solid #3f3f48;
+  background:#2a2a2a;
+  border:1px solid transparent;
   color:#fff;
-  border-radius:12px;
-  padding:12px 14px;
+  border-radius:10px;
+  padding:14px 16px;
   font:inherit;
-  font-size:16px;
+  font-size:15px;
+  text-align:left;
 }
-input::placeholder{color:#5c5c68}
-input:focus{outline:2px solid #60a5fa;outline-offset:1px;border-color:#60a5fa}
+input::placeholder{color:#8a8a8a}
+input:focus-visible{outline:2px solid #bfdbfe;outline-offset:3px}
 input[aria-invalid="true"]{border-color:#f87171}
 input:-webkit-autofill{
   -webkit-text-fill-color:#fff;
   caret-color:#fff;
-  box-shadow:0 0 0 1000px #121216 inset;
+  box-shadow:0 0 0 1000px #2a2a2a inset;
 }
-.hp{position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden}
-.consent{margin:8px 0 0;font-size:12px;line-height:1.45;color:#9a9aa6}
 button{
   width:100%;
-  margin-top:16px;
+  margin-top:10px;
   border:0;
-  border-radius:12px;
-  padding:13px 16px;
+  border-radius:10px;
+  padding:14px 16px;
+  background:#f4f4f5;
+  color:#111;
   font:inherit;
-  font-size:16px;
-  font-weight:700;
-  color:#fff;
+  font-size:15px;
+  font-weight:600;
   cursor:pointer;
-  background:linear-gradient(180deg,#6d7bff 0%,#3d4ef5 42%,#2f6bff 100%);
-  box-shadow:0 0 22px rgba(79,100,255,.55),0 10px 24px rgba(37,70,255,.35);
 }
-button:hover{filter:brightness(1.06)}
-button:focus-visible{outline:2px solid #bfdbfe;outline-offset:2px}
-button:disabled{cursor:progress;filter:saturate(.75) brightness(.88)}
+button:hover{background:#fff}
+button:focus-visible{outline:2px solid #bfdbfe;outline-offset:3px}
+button:disabled{cursor:progress;opacity:.72}
 .status{min-height:1.2em;margin:12px 0 0;text-align:center;font-size:14px;font-weight:600}
 .status.ok{color:#86efac}
 .status.err{color:#fca5a5}
-.inquiries{margin:16px 0 4px;text-align:center;font-size:12px;color:#8d8d98}
-.inquiries a{color:#d4d4dc}
+.inquiries{margin:22px 0 0;text-align:center;font-size:12px;color:#6f6f6f}
+.inquiries a{color:#a3a3a3}
 .page-links{
   display:flex;
   gap:18px;
   justify-content:center;
-  padding:18px 16px 28px;
-  font-size:13px;
+  padding:8px 16px 28px;
+  font-size:12px;
 }
-.page-links a{color:#8d8d98;text-decoration:none;font-weight:600}
-.page-links a:hover,.inquiries a:hover{color:#fff}
+.page-links a{color:#6f6f6f;text-decoration:none;font-weight:500}
+.page-links a:hover,.inquiries a:hover{color:#d4d4d4}
+a:focus-visible{outline:2px solid #bfdbfe;outline-offset:3px}
 @media (max-width:480px){
-  .hang{padding-top:52px}
-  .strap{height:68px}
-  .card{padding:36px 18px 16px;border-radius:18px}
-  h1{font-size:26px}
-  button{padding:14px 16px}
+  .stage{padding-top:36px}
+  h1{font-size:28px}
 }
 </style>
 </head>
 <body>
-<div class="hang">
-  <div class="strap" aria-hidden="true"></div>
-  <main class="card" id="main">
-    <div class="slot" aria-hidden="true"></div>
-    <a class="brand" href="../index.html"><img src="../logo.png" alt="" width="26" height="26"><span>DetailBot</span></a>
+<main class="stage" id="main">
+  <div class="col">
+    <a class="mark" href="../index.html"><img src="../logo.png" alt="DetailBot" width="28" height="28"></a>
+    <!-- PLACEHOLDER COPY: Conor to replace -->
+    <p class="badge">DetailBot waitlist</p>
     <!-- PLACEHOLDER COPY: Conor to replace -->
     <h1>Join the waitlist</h1>
-    <p class="lede">DetailBot gives car detailing businesses proven Facebook ads. Sign up to hear when spots open.</p>
+    <p class="lede">Ads that bring in customers, done for you.</p>
+    <ul class="checks">
+      <li>Scripts that convert real customers</li>
+      <li>We edit your videos</li>
+      <li>We run and manage your Facebook ads for the best return</li>
+      <li>30-day free trial</li>
+    </ul>
     <form id="waitlist-form" novalidate>
       <div class="hp" aria-hidden="true">
         <label for="hp-company">Company</label>
         <input id="hp-company" name="hp_company" type="text" tabindex="-1" autocomplete="off">
       </div>
-      <div class="field">
-        <label for="email">Email Address</label>
-        <input id="email" name="email" type="email" autocomplete="email" inputmode="email" maxlength="254" required placeholder="you@example.com">
-      </div>
-      <div class="field">
-        <label for="phone">Phone <span class="opt">optional</span></label>
-        <input id="phone" name="phone" type="tel" autocomplete="tel" maxlength="40">
-        <p class="consent">The phone number is optional and won't be used for text messages without separate consent.</p>
-      </div>
+      <label class="sr" for="email">Email Address</label>
+      <input id="email" name="email" type="email" autocomplete="email" inputmode="email" maxlength="254" required placeholder="Your email address" aria-label="Email Address">
       <!-- PLACEHOLDER COPY: Conor to replace -->
-      <button type="submit">Join the waitlist</button>
+      <button type="submit">Join the waitlist →</button>
       <p id="status" class="status" role="status" aria-live="polite"></p>
     </form>
     <p class="inquiries">For inquiries, contact us at: <a href="../support.html">Support</a></p>
-  </main>
-</div>
+  </div>
+</main>
 <nav class="page-links" aria-label="Site">
   <a href="../index.html">Home</a>
   <a href="../privacy.html">Privacy</a>
@@ -216,7 +211,6 @@ button:disabled{cursor:progress;filter:saturate(.75) brightness(.88)}
   var KEY = "sb_publishable_fHEdHOWY6zm8H4OvjMkN0g_gdO173xp";
   var form = document.getElementById("waitlist-form");
   var emailEl = document.getElementById("email");
-  var phoneEl = document.getElementById("phone");
   var honey = document.getElementById("hp-company");
   var statusEl = document.getElementById("status");
   var button = form.querySelector("button[type=submit]");
@@ -246,7 +240,6 @@ button:disabled{cursor:progress;filter:saturate(.75) brightness(.88)}
     }
 
     var email = emailEl.value.trim().toLowerCase();
-    var phone = phoneEl.value.trim();
     if (!emailPattern.test(email)) {
       setStatus("err", "Enter a valid email address.");
       emailEl.setAttribute("aria-invalid", "true");
@@ -269,7 +262,6 @@ button:disabled{cursor:progress;filter:saturate(.75) brightness(.88)}
       },
       body: JSON.stringify({
         email: email,
-        phone: phone ? phone : null,
         source: "getdetailbot.com/waitlist",
         user_agent: navigator.userAgent
       })
