@@ -36,19 +36,8 @@ body{
   flex-direction:column;
   align-items:center;
   flex:1 0 auto;
-  padding-top:78px;
+  padding-top:28px;
   position:relative;
-}
-.strap{
-  position:absolute;
-  top:0;
-  left:50%;
-  width:46px;
-  height:96px;
-  transform:translateX(-50%);
-  background:linear-gradient(90deg,#1e3a8a 0%,#2563eb 18%,#eff6ff 46%,#60a5fa 58%,#1d4ed8 100%);
-  box-shadow:0 0 12px rgba(59,130,246,.85),0 0 28px rgba(37,99,235,.45);
-  z-index:3;
 }
 .card{
   width:100%;
@@ -59,29 +48,6 @@ body{
   border-radius:22px;
   padding:40px 26px 18px;
   box-shadow:0 30px 70px rgba(0,0,0,.5),inset 0 1px 0 rgba(255,255,255,.06);
-}
-.slot{
-  position:absolute;
-  top:14px;
-  left:50%;
-  width:92px;
-  height:16px;
-  transform:translateX(-50%);
-  border-radius:8px;
-  background:#050507;
-  box-shadow:inset 0 3px 5px rgba(0,0,0,.95),inset 0 -1px 0 rgba(255,255,255,.18),0 0 0 1px rgba(255,255,255,.06);
-  overflow:hidden;
-  z-index:4;
-}
-.slot::before{
-  content:"";
-  position:absolute;
-  top:0;
-  left:50%;
-  width:46px;
-  height:100%;
-  transform:translateX(-50%);
-  background:linear-gradient(90deg,#1e3a8a 0%,#2563eb 18%,#eff6ff 46%,#60a5fa 58%,#1d4ed8 100%);
 }
 .brand{
   display:flex;
@@ -146,7 +112,6 @@ button{
   color:#fff;
   cursor:pointer;
   background:linear-gradient(180deg,#6d7bff 0%,#3d4ef5 42%,#2f6bff 100%);
-  box-shadow:0 0 22px rgba(79,100,255,.55),0 10px 24px rgba(37,70,255,.35);
 }
 button:hover{filter:brightness(1.06)}
 button:focus-visible{outline:2px solid #bfdbfe;outline-offset:2px}
@@ -166,8 +131,6 @@ button:disabled{cursor:progress;filter:saturate(.75) brightness(.88)}
 .page-links a{color:#8d8d98;text-decoration:none;font-weight:600}
 .page-links a:hover,.inquiries a:hover{color:#fff}
 @media (max-width:480px){
-  .hang{padding-top:52px}
-  .strap{height:68px}
   .card{padding:36px 18px 16px;border-radius:18px}
   h1{font-size:26px}
   button{padding:14px 16px}
@@ -176,9 +139,7 @@ button:disabled{cursor:progress;filter:saturate(.75) brightness(.88)}
 </head>
 <body>
 <div class="hang">
-  <div class="strap" aria-hidden="true"></div>
   <main class="card" id="main">
-    <div class="slot" aria-hidden="true"></div>
     <a class="brand" href="../index.html"><img src="../logo.png" alt="" width="26" height="26"><span>DetailBot</span></a>
     <!-- PLACEHOLDER COPY: Conor to replace -->
     <h1>Join the waitlist</h1>
