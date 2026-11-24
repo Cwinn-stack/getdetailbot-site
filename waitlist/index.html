@@ -169,6 +169,23 @@ a:focus-visible{outline:2px solid #bfdbfe;outline-offset:3px}
   h1{font-size:28px}
 }
 </style>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '29127408136952785');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=29127408136952785&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 </head>
 <body>
 <main class="stage" id="main">
@@ -268,6 +285,9 @@ a:focus-visible{outline:2px solid #bfdbfe;outline-offset:3px}
     }).then(function (res) {
       if (res.ok) {
         finishSuccess();
+        try {
+          if (typeof window.fbq === "function") window.fbq("track", "Lead");
+        } catch (leadErr) {}
         return;
       }
       return res.json().catch(function () { return {}; }).then(function (err) {
